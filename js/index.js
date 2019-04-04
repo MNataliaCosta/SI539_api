@@ -16,7 +16,7 @@ fetch('https://api.nytimes.com/svc/books/v3/lists.json?list-name=hardcover-ficti
 
 function updateBestSellers(nytimesBestSellers) {
   nytimesBestSellers.results.forEach(function(book) {
-    console.log(book);
+    // console.log(book);
     var isbn = book.isbns[1].isbn10;
     var bookInfo = book.book_details[0];
     var lastWeekRank = book.rank_last_week || 'n/a';
